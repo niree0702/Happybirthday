@@ -19,18 +19,24 @@
           <input type="email" class="form-control mb-2" placeholder="Email" id="email" required />
           <input type="tel" class="form-control mb-2" placeholder="Phone Number" id="phone" required />
           <input type="text" class="form-control mb-2" placeholder="LinkedIn Profile" id="linkedin" />
+          <input type="text" class="form-control mb-2" placeholder="github profile" id="github" />
 
           <h5>Education</h5>
-          <input type="text" class="form-control mb-2" placeholder="Degree" id="degree" required />
-          <input type="text" class="form-control mb-2" placeholder="University/College" id="college" />
+          <input type="text" class="form-control mb-2" placeholder="school" id="school" required />
+          <input type="text" class="form-control mb-2" placeholder="University/college" id="College" required />
+          <input type="text" class="form-control mb-2" placeholder="degree" id="degree" />
           <input type="text" class="form-control mb-2" placeholder="Year of Graduation" id="gradYear" />
 
           <h5>Experience</h5>
           <textarea class="form-control mb-2" placeholder="Work Experience" id="experience"></textarea>
 
-          <button type="button" class="btn btn-primary mt-3" onclick="generateResume()">Preview Resume</button>
+                <!-- Resume Preview Section -->
+
+<button type="button" class="btn btn-primary mt-3" onclick="generateResume()">Preview Resume</button>
         </form>
       </div>
+      
+      
       
       <h5>Select Template</h5>
 <select id="templateSelect" class="form-select mb-3">
@@ -38,11 +44,16 @@
   <option value="classic">Classic</option>
 </select>
 
-      <!-- Resume Preview Section -->
-      <h5>Education</h5>
 <div id="previewEducation"></div>
+div class="col-md-6">
+        <div id="resumePreview" class="p-4 border bg-white rounded">
+          <h3 id="previewschool">Your Name</h3>
+          <p><strong>Email:</strong> <span id="previewcollege"></span></p>
+          <p><strong>Phone:</strong> <span id="previewdegree"></span></p>
+          <p><strong>LinkedIn:</strong> <span id="previewgradyear"></span></p>
 
-<h5>Experience</h5>
+
+
 <div id="previewExperience"></div>
       <div class="col-md-6">
         <div id="resumePreview" class="p-4 border bg-white rounded">
@@ -50,8 +61,9 @@
           <p><strong>Email:</strong> <span id="previewEmail"></span></p>
           <p><strong>Phone:</strong> <span id="previewPhone"></span></p>
           <p><strong>LinkedIn:</strong> <span id="previewLinkedin"></span></p>
+          <p><strong>github:</strong> <span id="previewgithub"><</span></p>
 
-          <<h5>Education</h5>
+          
 <div id="educationSection">
   <div class="edu-item mb-2">
     <input type="text" class="form-control mb-1" placeholder="Degree" name="degree" />
@@ -61,7 +73,7 @@
 </div>
 <button type="button" class="btn btn-sm btn-secondary mb-3" onclick="addEducation()">+ Add More Education</button>
 
-<h5>Experience</h5>
+
 <div id="experienceSection">
   <div class="exp-item mb-2">
     <textarea class="form-control mb-1" placeholder="Experience" name="experience"></textarea>
