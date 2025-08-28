@@ -72,4 +72,10 @@ function openDoor() {
     document.querySelector(".wish-text").style.opacity = "1";
   }, 2000);
 }
+function playMusic() {
+  const song = document.getElementById("birthdaySong");
+  song.play();
+  alert("🎶 Music is playing!");
+}
+
 
