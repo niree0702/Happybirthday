@@ -158,3 +158,51 @@ button {
 button:hover {
   background: #ff69b4;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  scroll-behavior: smooth; /* Smooth scroll up & down */
+}
+
+.page {
+  height: 100vh; /* Each section takes full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  color: #222;
+  border-bottom: 3px solid white;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff1493;
+  text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+}
+
+.photo {
+  width: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1.2em;
+  background: #ff1493;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff69b4;
+}
+
