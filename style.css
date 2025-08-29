@@ -1,196 +1,170 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  color: #222;
+  scroll-behavior: smooth;
+  background: #ffe4ec;
+  overflow-x: hidden;
 }
-
-#confetti {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.container {
-  position: relative;
-  z-index: 10;
-  margin-top: 80px;
-}
-
-h1 {
-  font-size: 3em;
-  color: #ff1493;
-  animation: bounce 1.5s infinite;
-}
-
-p {
-  font-size: 1.5em;
-  margin: 20px 0;
-}
-
-.photo {
-  width: 250px;
-  border-radius: 20px;
-  margin: 20px 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-button {
-  padding: 12px 25px;
-  font-size: 1.2em;
-  background: #ff1493;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #ff69b4;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  text-align: center;
-}
-
-/* 🚪 Door wrapper */
-.door-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
+/* 🚪 Creative Door Panels */
 .door {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 50%;
   height: 100%;
-  background: #5a2d0c;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
-  transition: transform 2s ease-in-out;
+  background: linear-gradient(135deg, #8B4513, #A0522D); /* wooden look */
+  z-index: 999;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+  transition: transform 2.5s ease-in-out;
+  transform-origin: center; /* swing pivot will be set per door */
 }
 
+/* Left Door */
 .left-door {
   left: 0;
+  border-right: 3px solid #4b2e12;
+  transform-origin: left center; /* swing from left edge */
 }
 
+/* Right Door */
 .right-door {
   right: 0;
+  border-left: 3px solid #4b2e12;
+  transform-origin: right center; /* swing from right edge */
 }
 
-.open-btn {
+/* Door Handles */
+.handle {
   position: absolute;
-  bottom: 40px;
-  padding: 15px 30px;
-  font-size: 1.2em;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: gold;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.left-door .handle { right: 20px; }
+.right-door .handle { left: 20px; }
+
+/* When doors open */
+body.opened .left-door { transform: rotateY(-100deg); }
+body.opened .right-door { transform: rotateY(100deg); }
+
+
+/* 🚪 Door Panels */
+.door {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
   background: #ff1493;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 110;
-}
-.open-btn:hover {
-  background: #ff69b4;
+  z-index: 999;
+  transition: transform 2s ease;
 }
 
-/* 🎉 Hidden Birthday Content */
-.container {
-  display: none;
-  margin-top: 100px;
-  color: #222;
+.left-door { left: 0; }
+.right-door { right: 0; }
+
+body.opened .left-door { transform: translateX(-100%); }
+body.opened .right-door { transform: translateX(100%); }
+
+/* 🎈 Floating Heart Balloons */
+.hearts span {
+  position: fixed;
+  bottom: -50px;
+  font-size: 40px;
+  color: red;
+  animation: float 10s infinite;
+  opacity: 0.8;
+  z-index: 1;
 }
 
-.wish-text {
-  font-size: 3em;
-  color: #ff1493;
-  text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
-  animation: dropDown 1s ease forwards;
-  opacity: 0;
+.hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.hearts span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.hearts span:nth-child(4) { left: 70%; animation-delay: 6s; }
+.hearts span:nth-child(5) { left: 90%; animation-delay: 8s; }
+
+@keyframes float {
+  0%   { transform: translateY(0) scale(1); opacity: 0.9; }
+  50%  { transform: translateY(-50vh) scale(1.2); opacity: 1; }
+  100% { transform: translateY(-100vh) scale(0.8); opacity: 0; }
 }
 
-@keyframes dropDown {
-  0% { transform: translateY(-200px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.photo {
-  width: 250px;
-  border-radius: 20px;
-  margin: 20px 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-button {
-  padding: 12px 25px;
-  font-size: 1.2em;
-  background: #ff1493;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-button:hover {
-  background: #ff69b4;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  scroll-behavior: smooth; /* Smooth scroll up & down */
-}
-
+/* 🎂 Page Sections */
 .page {
-  height: 100vh; /* Each section takes full screen */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  padding: 40px;
   color: #222;
-  border-bottom: 3px solid white;
+  position: relative;
+  z-index: 2;
 }
 
+.main { background: linear-gradient(to right, #ffdde1, #ee9ca7); }
+.gallery { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+.message { background: linear-gradient(to right, #84fab0, #8fd3f4); }
+
+/* ✨ Popping Text Animation */
+.pop {
+  animation: popIn 1s ease forwards;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.pop-delay {
+  animation: popIn 1.5s ease forwards;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* 🎇 Fade-in for Photos */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s ease;
+}
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🎂 Styling */
 h1 {
   font-size: 3em;
   color: #ff1493;
   text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
 }
 
+h2 {
+  color: #ff1493;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 700px;
+}
+
 .photo {
-  width: 300px;
-  border-radius: 20px;
-  margin-top: 20px;
+  width: 250px;
+  border-radius: 15px;
+  margin: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* 🎵 Button */
 button {
   padding: 12px 25px;
   font-size: 1.2em;
@@ -200,9 +174,10 @@ button {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 15px;
+  z-index: 3;
 }
 
 button:hover {
   background: #ff69b4;
 }
-
