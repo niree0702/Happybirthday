@@ -48,6 +48,32 @@ window.addEventListener("load", () => {
     }
   }, 3000);
 });
+// 🚪 Door animation after page load
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.body.classList.add("opened");
+  }, 1500); 
+});
+
+// 🎶 Play music (button in music section)
+function playMusic() {
+  const song = document.getElementById("birthdaySong");
+  song.play();
+  alert("🎶 Music is playing!");
+}
+
+// 🎥 Prepare videos (manual play recommended)
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const videos = document.querySelectorAll("video");
+    videos.forEach((video, i) => {
+      console.log(`Video ${i+1} ready with controls.`);
+      // If you want autoplay muted:
+      // video.muted = true;
+      // video.play();
+    });
+  }, 3000);
+});
 
 
 
