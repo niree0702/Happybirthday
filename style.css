@@ -181,3 +181,13 @@ button {
 button:hover {
   background: #ff69b4;
 }
+.video {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+video {
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
