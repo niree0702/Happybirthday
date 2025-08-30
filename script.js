@@ -74,46 +74,7 @@ window.addEventListener("load", () => {
     });
   }, 3000);
 });
-// 🚪 Door animation
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.body.classList.add("opened");
 
-    // 🎊 Trigger confetti
-    launchConfetti();
-
-    // Smooth scroll to first wish section
-    document.querySelector(".wish").scrollIntoView({ behavior: "smooth" });
-  }, 1500);
-});
-
-// 🎶 Play music
-function playMusic() {
-  const song = document.getElementById("birthdaySong");
-  song.play();
-  alert("🎶 Music is playing!");
-}
-
-// 🎊 Confetti Animation
-function launchConfetti() {
-  const confetti = document.getElementById("confetti");
-  for (let i = 0; i < 100; i++) {
-    let span = document.createElement("span");
-    span.className = "confetti-piece";
-    span.style.left = Math.random() * 100 + "vw";
-    span.style.animationDelay = Math.random() * 3 + "s";
-    confetti.appendChild(span);
-  }
-}
-window.addEventListener("load", () => {
-  const doorSound = new Audio("door-creak.mp3"); // put your door sound file
-  setTimeout(() => {
-    document.body.classList.add("opened");
-    doorSound.play();
-    launchConfetti();
-    document.querySelector(".wish").scrollIntoView({ behavior: "smooth" });
-  }, 1500);
-});
 
 
 
