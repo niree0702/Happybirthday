@@ -222,5 +222,55 @@ video {
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
+/* 🚪 Creative Door Animation */
+.door {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  z-index: 1000;
+  transform-origin: center;
+  transition: transform 2s ease-in-out;
+  box-shadow: inset 0 0 50px rgba(255, 215, 0, 0.2); /* glowing edges */
+}
+
+/* Left door opens like a real door */
+.left-door {
+  left: 0;
+  transform-origin: left center;
+}
+body.opened .left-door {
+  transform: rotateY(-100deg); /* swing open */
+}
+
+/* Right door opens like a real door */
+.right-door {
+  right: 0;
+  transform-origin: right center;
+}
+body.opened .right-door {
+  transform: rotateY(100deg); /* swing open */
+}
+
+/* 🌟 Glow effect when doors open */
+body.opened .door {
+  box-shadow: 0 0 60px rgba(255, 223, 0, 0.7), inset 0 0 40px rgba(255, 255, 0, 0.5);
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,223,0,0.6) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 500;
+}
+body.opened::before {
+  opacity: 1; /* glowing light after doors open */
+}
+
 
 
