@@ -105,6 +105,16 @@ function launchConfetti() {
     confetti.appendChild(span);
   }
 }
+window.addEventListener("load", () => {
+  const doorSound = new Audio("door-creak.mp3"); // put your door sound file
+  setTimeout(() => {
+    document.body.classList.add("opened");
+    doorSound.play();
+    launchConfetti();
+    document.querySelector(".wish").scrollIntoView({ behavior: "smooth" });
+  }, 1500);
+});
+
 
 
 
