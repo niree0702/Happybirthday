@@ -18,13 +18,13 @@ window.addEventListener("scroll", () => {
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.body.classList.add("opened");
-  }, 1500); // wait 1.5s then swing open
+  }, 1500); // wait 1s then swing open
 });
 // 🚪 Door animation after page load
 window.addEventListener("load", () => {
   setTimeout(() => {
     document.body.classList.add("opened");
-  }, 1500); // wait 1.5s then swing open
+  }, 1500); // wait 1s then swing open
 });
 
 // 🎶 Play music (button in music section)
