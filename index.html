@@ -75,8 +75,16 @@ button:hover{transform:scale(1.1)}
 /* BIG MESSAGE */
 .big{
   font-size:30px;
-  margin-top:60px;
+  margin-top:60px auto;
   text-shadow:0 0 20px #ff6ec4;
+ padding:20px;
+  width:50%;
+  background:rgba(255,255,255,0.08);
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  transform:translateY(50px);
+  opacity:0;
+  transition:1s;
 }
 
 </style>
@@ -138,7 +146,7 @@ button:hover{transform:scale(1.1)}
   <div class="gallery"><img src="pic12.jpeg"><p>PARTNER IN GOSSIP👀❤️🫂</p></div>
   <div class="gallery"><img src="pic13.jpeg"><p>HAPPY BIRDAY SHANKYYYYY👀❤️🫂</p></div>
   
- <section class="gallery">
+ <section class="card">
 	 <!-- VIDEOS -->
  <h1 align=center>🎥A SPECIAL VIDEO JUST FOR YOU❤️</h1>
   <div class="gallery"><video controls src="vid1.mp4"></video><p>💎🫶🏻🌍</p></div>
