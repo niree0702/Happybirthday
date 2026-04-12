@@ -71,6 +71,21 @@ button:hover{transform:scale(1.1)}
 .card img,.card video{width:50%;border-radius:15px}
 .card p{margin-top:10px;color:#ddd}
 
+	.wrapper {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    min-height: 100vh;      /* Takes up 100% of the viewport height */
+    text-align: center;      /* Centers the text inside */
+}
+	.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Moves item back by half its size */
+    text-align: center;
+}
+
 /* BIG MESSAGE */
 .big{
   font-size:30px;
@@ -138,10 +153,15 @@ button:hover{transform:scale(1.1)}
   <div class="gallery"><img src="pic13.jpeg"><p>HAPPY BIRDAY SHANKYYYYY👀❤️🫂</p></div>
   
  <section>
- <!-- VIDEOS -->
- <h1 align=center>🎥A SPECIAL VIDEO JUST FOR YOU❤️</h1>
-  <div class="gallery"><video controls src="vid1.mp4"></video><p>💎🫶🏻🌍</p></div>
-  <div class="gallery"><video controls src="vid2.mp4"></video><p>🎥A SPECIAL VIDEO JUST FOR YOU❤️</p></div>
+	 <div class="wrapper">
+    <div class="content">
+        <video controls>
+            <source src="vid1.mp4" type="video/mp4">
+			<source src="vid2.mp4" type="video/mp4">
+        </video>
+        <p>🎥A SPECIAL VIDEO JUST FOR YOU❤️</p>
+    </div>
+</div>
   </section>
   
  
