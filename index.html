@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎁 Ultimate Birthday Surprise</title>
+<title>🎁Birthday Surprise</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -68,7 +68,7 @@ button:hover{transform:scale(1.1)}
   transition:1s;
 }
 .card.show{transform:translateY(0);opacity:1}
-.card img,.card video{width:100%;border-radius:15px}
+.card img,.card video{width:50%;border-radius:15px}
 .card p{margin-top:10px;color:#ddd}
 
 /* BIG MESSAGE */
@@ -106,15 +106,22 @@ button:hover{transform:scale(1.1)}
   <button onclick="check()">Unlock</button>
 </section>
 
-<section>
-  <h1>🎵 Click to Start Music</h1>
+  <section>
+  <!-- VOICE -->
+  <h1>Click to start voice msg🫶🏻</h1>
+  <audio controls src="voice.ogg"></audio>
+  </section>
+
+     <section>
+	 <!--music-->
+<h1>🎵your fav song</h1>
   <button onclick="playMusic()">Play Music</button>
-  <audio id="music" src="music.mp3"></audio>
+  <audio id="music" src="C:\surprise\pink lips.mpeg"></audio>
 </section>
 
 <!-- GALLERY -->
 <section class="gallery">
-  <h1>💖 Memories 💖</h1>
+  <h1>💖💖</h1>
 
   <!-- IMAGES -->
   <div class="gallery"><img src="pic2.jpeg"><p>HAPPIEST BIRTHDAY SHANKYYYY👀❤️🫂</p></div><br>
@@ -130,18 +137,26 @@ button:hover{transform:scale(1.1)}
   <div class="gallery"><img src="pic12.jpeg"><p>PARTNER IN GOSSIP👀❤️🫂</p></div>
   <div class="gallery"><img src="pic13.jpeg"><p>HAPPY BIRDAY SHANKYYYYY👀❤️🫂</p></div>
   
-  <!-- VIDEOS -->
+ <section>
+ <!-- VIDEOS -->
+ <h1>🎥A SPECIAL VIDEO JUST FOR YOU❤️</h1>
   <div class="gallery"><video controls src="vid1.mp4"></video><p>💎🫶🏻🌍</p></div>
-  <div class="gallery"><video controls src="video2.mp4"></video><p>🎥A SPECIAL VIDEO JUST FOR YOU❤️</p></div>
+  <div class="gallery"><video controls src="vid2.mp4"></video><p>🎥A SPECIAL VIDEO JUST FOR YOU❤️</p></div>
+  </section>
   
  
 
 
-  <!-- BIG MESSAGE -->
+ <section>
+ <!-- BIG MESSAGE -->
   <div class="big" id="bigMsg"></div>
-  
-  <!-- VOICE -->
-  <audio controls src="voice.ogg"></audio>
+  <h>Happy Birthday💗🫶🏻 to someone who will always hold a special place in my life. Even though we haven’t spoken much in the past 1.5 years, the bond we share still feels the same and things changed in ways we didn’t expect, but the memories and the comfort of our friendship never really faded💗. Sometimes it feels like you’ve changed👀, and maybe we both have in our own ways, but I still see the same good person I’ve always known.
+
+No matter the distance or the silence, I still remember all our talks, the comfort, and how easy everything felt 
+back then. You’ve always been a really good friend to me, and honestly, that’s something I’ll always value.
+
+ONCE AGAIN HAPPIEST BIRTHDAY SHASHANKUUU 💗🫶🏻 may our bond stays forever ♾️...
+Yenardh nik dala bejar aadithnda sorry ava and yaan dala thappu malthnda apagane panla airdh patheruna poora budorchi....pleaseee e yepala Yenna bestest friend aadh upuva forever please change onji avorchi ya ethe yencha ulla anchene upula...it hurts me the most when a  close person of mine whom I trust the most stop talking.... yepala inchene upula... happiest birthday shashankuuuu🫶🏻💗</h1>
 
   
 </section>
@@ -163,7 +178,7 @@ function next(){
 }
 
 // TYPE TEXT
-let t="Happy Birthday 🎂 Stay Amazing!";
+let t="Happy Birthday 💖💖 Stay Amazing!";
 let i=0;
 function type(){
   if(i<t.length){
@@ -182,7 +197,7 @@ function check(){
 document.querySelector('.door-section').classList.add('open');
 
 // BIG MESSAGE
-let b="You are truly special 💖 Never stop smiling!";
+let b="💖💖!";
 let j=0;
 function big(){
   if(j<b.length){
